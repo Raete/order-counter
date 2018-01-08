@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Choose your meal</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&amp;subset=latin-ext" rel="stylesheet">
+		<link rel="stylesheet" href="css/main-style.min.css">
+
+	</head>
+	<body>
+		<main class="container">
+			<h1 class="heading">Choose your meal</h1>
+			<section class="img_set">
+				<div class="img_wrapper">
+					<p class="item_price">price:
+						<span id="burgerPrice">5,20 €</span>
+					</p>
+					<img class="img_food" src="img/burger.jpg" alt="burger">
+					<div class="counter"></div>
+				</div>
+
+				<div class="img_wrapper">
+					<p class="item_price">price:
+						<span id="pastaPrice">4,50 €</span>
+					</p>
+					<img class="img_food" src="img/pasta.jpg" alt="pasta">
+					<div class="counter"></div>
+				</div>
+
+		 		<div class="img_wrapper">
+		 			<p class="item_price">price:
+						<span id="pizzaPrice">8,65 €</span>
+					</p>
+					<img class="img_food" src="img/pizza.jpg" alt="pizza">
+					<div class="counter"></div>
+				</div>
+
+			</section>
+
+			<section class="wrapper_total_price" >
+				<span>Total price:</span>
+				<p class="total_price"></p>
+				<span>Discount price:</span>
+				<p class="discount_price"></p>
+				<p class="discount">Discount 50%</p>
+			</section>
+
+			<button class="btn--clear">	reset </button>
+
+		</main>
+		<script src="js/lodash.min.js"></script>
+		<script src="js/food.module.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>

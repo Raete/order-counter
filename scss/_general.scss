@@ -1,0 +1,145 @@
+html { box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+	        box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	background: $color-background;
+	font-family: $font-family-main;
+	padding: 0.8em;
+}
+
+img {
+	height: auto;
+	width: 100%;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.heading {
+	color: $color-main;
+	font-size: 5em;
+}
+
+.img_set {
+	display: flex;
+}
+
+.img_food {
+	cursor: pointer;
+	&:hover,
+	&:focus {
+		transition: .2s all ease-in-out;
+	}
+}
+
+.img_wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&:nth-child(2) {
+		margin: 0 0.8em;
+	}
+}
+
+.counter {
+	position: absolute;
+	bottom: -60px;
+	padding: 20px 20px;
+	height: 60px;
+	background: $color-main;
+	color: $color-light;
+	font-size: 1.2em;
+	font-weight: 700;
+	&:after,
+	&:before {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 0;
+		bottom: -20px;
+		border-top: 20px solid transparent;
+		border-bottom: 20px solid transparent;
+	}
+	&:after {
+		right: 0;
+  		border-right: 40px solid $color-main;
+	}
+	&:before {
+		left: 0;
+		border-left: 40px solid $color-main;
+	}
+}
+
+.desaturate {
+	filter: grayscale(100%);
+}
+
+/*
+TOTAL PRICE
+ ------------------------------------------------------
+*/
+
+.item_price {
+	display: block;
+	color: $color-main;
+	font-weight: 300;
+	font-size: 1.2em;
+	align-self: left;
+	padding: 0;
+	margin: 0;
+	span {
+		color: $color-main;
+		font-size: 1.5em;
+		font-weight: 700;
+	}
+}
+
+.wrapper_total_price {
+	margin-top: 10em;
+	text-align: center;
+	color: $color-main;
+	padding: 30px 50px;
+	border: 2px solid $color-main;
+	.total_price,
+	.discount_price {
+		font-size: 1.5em;
+		font-weight: 700;
+		margin: 0;
+	}
+	.total_price {
+		margin-bottom: 1em;
+	}
+}
+
+
+.wrapper_discount {
+margin-top: 2em;
+}
+
+.btn--clear {
+	color: $color-light;
+	font-size: 1em;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 1em 3em;
+	margin-top: 2em;
+	background: $color-main;
+	border: 2px solid $color-main;
+	cursor: pointer;
+	&:hover,
+	&:focus {
+		background: darken($color-main, 3%);
+		border: 2px solid darken($color-main, 3%);
+		outline: 0;
+	}
+}
